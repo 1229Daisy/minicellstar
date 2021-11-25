@@ -1,13 +1,51 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
+    "pages/mine/mine",
+    "pages/booking/booking",
     "pages/logs/logs"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "细胞之星",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/index01.png",
+        "selectedIconPath": "/img/index02.png",
+        "selectedColor": "#009944"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查询",
+        "iconPath": "/img/re01.png",
+        "selectedIconPath": "/img/re02.png",
+        "selectedColor": "#009944"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约",
+        "iconPath": "/img/bo01.png",
+        "selectedIconPath": "/img/bo02.png",
+        "selectedColor": "#009944"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/img/me01.png",
+        "selectedIconPath": "/img/me02.png",
+        "selectedColor": "#009944"
+      }
+    ],
+    "color": "#cdcdcd",
+    "selectedColor": "#009944"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
