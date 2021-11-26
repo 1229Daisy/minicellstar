@@ -1,0 +1,58 @@
+<view style="width:100%;height:auto;">
+  <view style="width: 100%;height: auto;position: absolute;background-color: #009944;">
+    <!-- <image src="https://bainuo.beijingepidial.com/public/img/02hpv.jpg"style="width: 100%;height: auto;" mode="widthFix" ></image> -->
+    <view style="width: 100%;height: 200rpx;line-height: 200rpx; font-size: 46rpx;font-weight: 700;text-align: center;color: #fff;">预约信息</view>
+
+    <view style="width: 100%;height: 800rpx;top: 200rpx;border-top-left-radius: 30rpx;border-top-right-radius: 30rpx; background-color: white;">
+      <view style="width: 100%;height: auto;">
+        <view style="width: 90%;height: auto;margin: 0 auto;border-radius: 30rpx;">
+          <!-- 客户姓名 -->
+          <view style='width:100%;height:90rpx;margin-left: 1%;margin-top: 70rpx; border: 3rpx solid #009944; border-radius: 15rpx; display:inline-block; color: #009944;background:#fff;align-self: center;position: relative;'>
+            <input style='width:80%;display:inline-block;height:90rpx;left: 10rpx;  position: absolute;' placeholder-style='' placeholder='客户姓名' type='text' bindinput="bininput_username" value='{{username}}'></input>
+            <view style='width:16%;display:inline-block;height:70rpx;bottom: 16rpx;right: 20rpx; position: absolute;'>
+            </view>
+          </view>
+          <!-- 预约时间 -->
+          <picker mode="date" value="{{reservedate}}" start="{{startDate}}" end="" bindchange='bininput_reservedate'>
+            <view style='width:100%;height:90rpx;margin-left: 1%;margin-top: 40rpx; border: 3rpx solid #009944; border-radius: 15rpx; display:inline-block; color: #009944;background:#fff;align-self: center;position: relative;'>
+              <input style='width:80%;display:inline-block;height:90rpx;left: 10rpx;  position: absolute;' placeholder-style='' disabled="true" placeholder='预约日期' auto-focus="true" type='date' value='{{reservedate}}'></input>
+              <view style='width:16%;display:inline-block;height:70rpx;bottom: 16rpx;right: 20rpx; position: absolute;'>
+                <image src='../../img/booking2.png' bindtap="bininput_reservedate" style='display:inline;' mode="aspectFit">
+                </image>
+              </view>
+            </view>
+          </picker>
+          <!-- 预约项目 -->
+          <picker mode="selector" value="{{project[projectindex].name}}" range-key="{{'name'}}" range="{{project}}" bindchange='bininput_project'>
+            <view style='width:100%;height:90rpx;margin-left: 1%;margin-top: 40rpx; border: 3rpx solid #009944; border-radius: 15rpx; display:inline-block; background:#fff;align-self: center;position: relative;'>
+              <input style='width:80%;display:inline-block;height:90rpx;left: 10rpx;color: #009944;  position: absolute;' placeholder-style='' placeholder='预约项目' type='text' disabled="true" value='{{project[projectindex].name}}'></input>
+              <view style='width:16%;display:inline-block;height:70rpx;bottom: 16rpx;right: 20rpx; position: absolute;'>
+                <image src='../../img/booking1.png' bindtap="scanCode" style='display:inline;' mode="aspectFit">
+                </image>
+              </view>
+            </view>
+          </picker>
+          <!-- 使用日期 -->
+          <picker mode="date" value="{{usedate}}" start="{{startDate}}" end="" bindchange='bininput_usedate'>
+            <view style='width:100%;height:90rpx;margin-left: 1%;margin-top: 40rpx; border: 3rpx solid #009944; border-radius: 15rpx; display:inline-block; background:#fff;align-self: center;position: relative;'>
+              <input style='width:80%;display:inline-block;height:90rpx;left: 10rpx;color: #009944;  position: absolute;' placeholder-style='' placeholder='使用日期' type='date' value='{{usedate}}'></input>
+              <view style='width:16%;display:inline-block;height:70rpx;bottom: 16rpx;right: 20rpx; position: absolute;'>
+                <image src='../../img/booking2.png' bindtap="scanCode" style='display:inline;' mode="aspectFit">
+                </image>
+              </view>
+            </view>
+          </picker>
+          <!-- 提交预约按钮 -->
+          <view bindtap="submitReserve" style="border:1px solid #009944;margin: 0 auto; background-color:#009944 ;width: 80%;margin-top: 50rpx; color: white;text-align: center;line-height: 45px;border-radius: 20px;background: linear-gradient(#57ce8c,#229455);font-weight: 700;">
+            提交</view>
+          <!-- 历史预约按钮 -->
+          <view style="width:100%;margin-top: 15px;margin-bottom: 50rpx;">
+            <view style="display: flex; width: 80%;margin: 0 auto;justify-content:center;">
+              <view style="font-size: 25rpx;color:#009944; text-decoration: underline;" bindtap="next">历史预约记录</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

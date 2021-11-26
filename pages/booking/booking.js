@@ -5,15 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        reservedate:""
+
     },
-  //绑定用户选择的预约日期
-  bininput_reservedate: function (e) {
-    this.setData({
-        reservedate: e.detail.value
-    })
-    console.info(e.detail.value)
-},
+
     /**
      * 生命周期函数--监听页面加载
      */

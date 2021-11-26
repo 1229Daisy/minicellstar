@@ -17,7 +17,7 @@
                                 </view>
                                 <view style="width: 300px;height: auto;">
                                     <input
-                                        style="width:95%;height: 45px;border-bottom: solid 1px #b8b8b8;font-size: 40rpx;color: #b8b8b8;margin-left: 30rpx;"
+                                        style="width:95%;height: 45px;border-bottom: solid 1px #b8b8b8;color: #b8b8b8;margin-left: 30rpx;"
                                         type="text" placeholder="请输入手机号" placeholder-class="phcolor" bindinput="inputUsername"/>
                                 </view>
                             </view>
@@ -31,7 +31,7 @@
                                     </view>
                                     <view style="width: 300px;height: auto;">
                                         <input
-                                            style="width: 95%;height: 45px;border-bottom: solid 1px #b8b8b8;font-size: 40rpx;color: #b8b8b8;margin-left: 30rpx;"
+                                            style="width: 95%;height: 45px;border-bottom: solid 1px #b8b8b8;color: #b8b8b8;margin-left: 30rpx;"
                                             password='{{passwordType}}' placeholder="请输入用户密码" placeholder-class="phcolor" bindinput="userPwd" />
 
                                     </view>

@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/mine/fgpwd",
-    "pages/mine/mine",
-    "pages/mine/register",
     "pages/index/index",
-    "pages/search/search",
+    "pages/mine/fgpwd",
+    "pages/mine/register",
+    "pages/reserve/reserve",
     "pages/booking/booking",
+    "pages/search/search",
+    "pages/mine/mine",
     "pages/logs/logs"
   ],
   "window": {
@@ -32,7 +33,7 @@
         "selectedColor": "#009944"
       },
       {
-        "pagePath": "pages/booking/booking",
+        "pagePath": "pages/reserve/reserve",
         "text": "预约",
         "iconPath": "/img/bo01.png",
         "selectedIconPath": "/img/bo02.png",

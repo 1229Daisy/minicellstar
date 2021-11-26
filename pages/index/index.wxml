@@ -1,7 +1,6 @@
 <!--index.wxml-->
 <view>
     <view style="width:100%;height: auto; margin-bottom: 100rpx;">
-       
             <view>
                 <view style="position: absolute; width: 100%;height: auto;top: 80rpx;flex: auto;">
                    <view style="width: 40%;height: 80rpx;margin: 0 auto;border: 1px solid #009944;background-color: #009944;box-shadow: 0px 5px 10px 3px #D1D1D1;border-radius: 10rpx 10rpx 0rpx 0rpx;">
@@ -61,6 +60,5 @@
 
                 </view>
             </view>
-
     </view>
 </view>
