@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/mine/fgpwd.js
 Page({
 
     /**
@@ -7,18 +7,7 @@ Page({
     data: {
 
     },
-    //跳转忘记密码
-    btnForget:function(e){
-      wx.navigateTo({
-        url: "../mine/fgpwd"
-      })
-    },
-    //跳转注册页面
-    next:function(e){
-        wx.navigateTo({
-          url: "../mine/register"
-        })
-      },
+
     /**
      * 生命周期函数--监听页面加载
      */

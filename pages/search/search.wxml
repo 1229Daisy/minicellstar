@@ -1,2 +1,37 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<!--index.wxml-->
+<view>
+    <view style="width:100%;height: auto; margin-bottom: 100rpx;">
+       
+            <view>
+                <view style="position: absolute; width: 100%;height: auto;top: 80rpx;flex: auto;">
+                  
+                   
+                    <view style="width: 100%;height: auto;margin: 0 auto;flex: auto;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 100rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
+                      </view>
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
+                      </view>
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
+                      </view>
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
+                      </view>
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
+                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
+                      </view>
+                     
+                    
+                      
+
+                    </view>
+
+                </view>
+            </view>
+
+    </view>
+</view>
+
