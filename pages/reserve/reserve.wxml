@@ -43,7 +43,7 @@
             </view>
           </picker>
           <!-- 提交预约按钮 -->
-          <view bindtap="submitReserve" style="border:1px solid #009944;margin: 0 auto; background-color:#009944 ;width: 80%;margin-top: 50rpx; color: white;text-align: center;line-height: 45px;border-radius: 20px;background: linear-gradient(#57ce8c,#229455);font-weight: 700;">
+          <view bindtap="submitReserve" style="margin: 0 auto; width: 80%;margin-top: 50rpx; color: white;text-align: center;line-height: 45px;border-radius: 20px;background: linear-gradient(#57ce8c,#009944);font-weight: 700;">
             提交</view>
           <!-- 历史预约按钮 -->
           <view style="width:100%;margin-top: 15px;margin-bottom: 50rpx;">

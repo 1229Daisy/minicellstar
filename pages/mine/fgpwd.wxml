@@ -2,9 +2,13 @@
 <!--pages/epiage/fgpwd.wxml-->
 <view>
     <view style="width:100%;height: auto; ">
-        <view style="position: absolute;width: 100%;height: auto;">
-            <image style="width: 100%;" mode="widthFix"
-                src="https://bainuo.beijingepidial.com/public/images/bg.png"> </image>
+        <view style="width:100%;height: 200rpx;margin-top: 100rpx;">
+        <view style="width:50%;height: 200rpx;margin:0 auto;">
+            <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 60rpx;margin-top: 40rpx;"
+                mode="widthFix" src="../../img/logo.png"> </image>
+        </view>
+    </view>
+            
             <view>
                 <view style="position: absolute; width: 100%;height: auto;top: 200px;flex: auto;">
                     <view
@@ -23,7 +27,7 @@
                                     <input style="width:100%;height: 45px;;font-size: 12px;" type="text"
                                         placeholder="请输入电话号码" placeholder-class="phcolor" bindinput="phoneInput"/>
                                     <view ><button disabled="{{disabled}}" bindtap="btnclic"
-                                            style="height: 35px;width: 200rpx;background: #009944;line-height: 35rpx;font-size: 20rpx;color: white;">发送验证码</button>
+                                            style="height: 35px;width: 200rpx;background: linear-gradient(#57ce8c,#009944);line-height: 35rpx;font-size: 20rpx;color: white;">发送验证码</button>
                                     </view>
                                 </view>
 
@@ -75,7 +79,7 @@
                             </view>
                             <view style="width: 100%; height: auto;margin-top: 20px;">
                                 <button disabled="{{enablereg}}" bindtap="btnreg"
-                                    style="margin: 0 auto ;width: 80%;color: white;text-align: center;line-height: 45px;border-radius: 5px;background: #009944;">
+                                    style="margin: 0 auto ;width: 80%;color: white;text-align: center;line-height: 45px;border-radius: 5px;background: linear-gradient(#57ce8c,#009944);">
                                     设置新密码</button>
                             </view>
                         </view>
@@ -85,7 +89,7 @@
                 </view>
             </view>
 
-        </view>
+        
     </view>
 </view>
 

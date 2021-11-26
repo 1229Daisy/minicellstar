@@ -1,37 +1,116 @@
 <!--pages/search/search.wxml-->
 <!--index.wxml-->
 <view>
-    <view style="width:100%;height: auto; margin-bottom: 100rpx;">
-       
-            <view>
-                <view style="position: absolute; width: 100%;height: auto;top: 80rpx;flex: auto;">
-                  
-                   
-                    <view style="width: 100%;height: auto;margin: 0 auto;flex: auto;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 100rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
-                      </view>
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
-                      </view>
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
-                      </view>
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
-                      </view>
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid #009944;background-color:#009944 ;border-radius: 10rpx;">
-                      <view style="width: 80%;height: 100rpx;margin: 0 auto ;line-height: 100rpx;color:white ;font-weight: 700;font-size: 40rpx;">体检报告</view>
-                      </view>
-                     
-                    
-                      
+  <view style="width:100%;height: auto; margin-bottom: 100rpx;">
 
-                    </view>
+    <view>
+      <view style="position: absolute; width: 100%;height: auto;top: 80rpx;flex: auto;">
 
-                </view>
+
+        <view style="width: 100%;height: auto;margin: 0 auto;flex: auto;">
+          <!-- 体检报告 -->
+          <view
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 100rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
+                mode="widthFix" src="../../img/s01.png"> </image>
             </view>
+            <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
+              <view
+                style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
+                体检报告</view>
+              <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
+                查询省体检报告报告</view>
+            </view>
+            <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
+                mode="widthFix" src="../../img/s02.png"> </image>
+            </view>
+          </view>
+          <!-- 免疫力评估 -->
+          <view
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
+                mode="widthFix" src="../../img/s05.png"> </image>
+            </view>
+            <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
+              <view
+                style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
+                免疫力评估</view>
+              <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
+                查询免疫力评估报告</view>
+            </view>
+            <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
+                mode="widthFix" src="../../img/s02.png"> </image>
+            </view>
+          </view>
+          <!-- 细胞质检 -->
+          <view
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
+                mode="widthFix" src="../../img/s03.png"> </image>
+            </view>
+            <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
+              <view
+                style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
+                细胞质检</view>
+              <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
+                查询细胞入库质检报告</view>
+            </view>
+            <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
+                mode="widthFix" src="../../img/s02.png"> </image>
+            </view>
+          </view>
+          <!-- 细胞储存 -->
+          <view
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
+                mode="widthFix" src="../../img/s04.png"> </image>
+            </view>
+            <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
+              <view
+                style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
+                细胞储存</view>
+              <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
+                查询细胞储存信息报告</view>
+            </view>
+            <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
+                mode="widthFix" src="../../img/s02.png"> </image>
+            </view>
+          </view>
+          <!-- 省库查询 -->
+          <view
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
+                mode="widthFix" src="../../img/s06.png"> </image>
+            </view>
+            <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
+              <view
+                style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
+                省库查询</view>
+              <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
+                查询省脐血库储存信息报告</view>
+            </view>
+            <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
+              <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
+                mode="widthFix" src="../../img/s02.png"> </image>
+            </view>
+          </view>
 
+
+
+
+        </view>
+
+      </view>
     </view>
-</view>
 
+  </view>
+</view>

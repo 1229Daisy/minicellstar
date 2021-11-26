@@ -1,1 +1,8 @@
 /* pages/mine/fgpwd.wxss */
+/* page{
+    overflow: hidden;
+    position: fixed;
+    background-image: url("https://bainuo.beijingepidial.com/public/images/bg.png");
+    margin: 0;
+    background-size: 100% 100%;
+  } */

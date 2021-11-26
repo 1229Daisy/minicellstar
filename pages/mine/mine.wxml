@@ -1,6 +1,12 @@
 <!--pages/mine/mine.wxml-->
 <view >
     <view style="width:100%;height: auto;margin-bottom: 100rpx; ">
+    <view style="width:100%;height: 200rpx;margin-top: 100rpx;">
+        <view style="width:50%;height: 200rpx;margin:0 auto;">
+            <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 60rpx;margin-top: 40rpx;"
+                mode="widthFix" src="../../img/logo.png"> </image>
+        </view>
+    </view>
             <view>
                 <view style="position: absolute; width: 100%;height: auto;top: 200px;flex: auto;">
                     <view style="width: 80%;height: auto;margin: 0 auto;">
@@ -17,7 +23,7 @@
                                 </view>
                                 <view style="width: 300px;height: auto;">
                                     <input
-                                        style="width:95%;height: 45px;border-bottom: solid 1px #b8b8b8;color: #b8b8b8;margin-left: 30rpx;"
+                                        style="width:95%;height: 45px;border-bottom: solid 1px #b8b8b8;margin-left: 30rpx;"
                                         type="text" placeholder="请输入手机号" placeholder-class="phcolor" bindinput="inputUsername"/>
                                 </view>
                             </view>
@@ -31,7 +37,7 @@
                                     </view>
                                     <view style="width: 300px;height: auto;">
                                         <input
-                                            style="width: 95%;height: 45px;border-bottom: solid 1px #b8b8b8;color: #b8b8b8;margin-left: 30rpx;"
+                                            style="width: 95%;height: 45px;border-bottom: solid 1px #b8b8b8;margin-left: 30rpx;"
                                             password='{{passwordType}}' placeholder="请输入用户密码" placeholder-class="phcolor" bindinput="userPwd" />
 
                                     </view>
@@ -47,12 +53,12 @@
                         </view>
                     </view>
                     <view style="width: 100%; height: auto;margin-top: 10px;">
-                        <button style="text-align:right ;font-size:28rpx;color: #b8b8b8;width: 75%;margin: 0 auto;border: none;background-color:transparent ;" bindtap="btnForget">忘记密码?
+                        <button style="text-align:right ;font-size:28rpx;color: #009944;width: 75%;margin: 0 auto;border: none;background-color:transparent ;" bindtap="btnForget">忘记密码?
                         </button>
                     </view>
                     <view style="width: 100%; height: auto;margin-top: 50px;">
                         <view bindtap="login"
-                            style="margin: 0 auto; background-color:#009944 ;width: 80%;color: white;text-align: center;line-height: 45px;border-radius: 20px;font-weight: 700;">
+                            style="margin: 0 auto; background: linear-gradient(#57ce8c,#009944);width: 80%;color: white;text-align: center;line-height: 45px;border-radius: 20px;font-weight: 700;">
                             登录</view>
                     </view>
                     <view style="width:100%;margin-top: 15px;">
