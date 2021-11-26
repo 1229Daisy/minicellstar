@@ -4,7 +4,7 @@
         <view style="width:100%;height: 200rpx;margin-top: 60rpx;">
         <view style="width:50%;height: 200rpx;margin:0 auto;">
             <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 60rpx;margin-top: 40rpx;"
-                mode="widthFix" src="../../img/logo.png"> </image>
+                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/logo.png"> </image>
         </view>
     </view>
             <view>
@@ -17,7 +17,7 @@
                                 <view style="width: 30px;height: 45px;position: relative;">
                                     <image mage
                                         style="width: 18px;height: 45px;position: absolute;top: 15px;right: 5px;"
-                                        mode="widthFix" src="../../img/p01.png">
+                                        mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/p01.png">
                                     </image>
 
                                 </view>
@@ -36,7 +36,7 @@
                                 <view view style="display: flex;width: 100%;border-bottom: solid 1px #cecece;margin-top: 25rpx;">
                                     <view style="width: 30px;height: 45px;position: relative;">
                                         <image style="width: 18px;height: 45px;position: absolute;top: 15px;right: 5px;"
-                                            mode="widthFix" src="../../img/p02.png">
+                                            mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/p02.png">
                                         </image>
                                     </view>
                                     <view style="width: 300px;height: auto;">
@@ -51,7 +51,7 @@
                                 <view view style="display: flex;width: 100%;border-bottom: solid 1px #cecece;margin-top: 25rpx">
                                     <view style="width: 30px;height: 45px;position: relative;">
                                         <image style="width: 18px;height: 45px;position: absolute;top: 15px;right: 5px;"
-                                            mode="widthFix" src="../../img/p03.png">
+                                            mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/p03.png">
                                         </image>
                                     </view>
                                     <view style="width: 300px;height: auto;">
@@ -66,7 +66,7 @@
                             <view view style="display: flex;width: 100%;border-bottom: solid 1px #cecece;margin-top: 25rpx">
                                 <view style="width: 30px;height: 45px;position: relative;">
                                     <image style="width: 18px;height: 45px;position: absolute;top: 15px;right: 5px;"
-                                        mode="widthFix" src="../../img/p04.png">
+                                        mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/p04.png">
                                     </image>
                                 </view>
                                 <view style="width: 300px;height: auto;">
@@ -79,7 +79,7 @@
                             <view view style="display: flex;width: 100%;border-bottom: solid 1px #cecece;margin-top: 25rpx">
                                 <view style="width: 30px;height: 45px;position: relative;">
                                     <image style="width: 18px;height: 45px;position: absolute;top: 15px;right: 5px;"
-                                        mode="widthFix" src="../../img/p04.png">
+                                        mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/p04.png">
                                     </image>
                                 </view>
                                 <view style="width: 300px;height: auto;">
