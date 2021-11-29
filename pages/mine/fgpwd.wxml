@@ -79,7 +79,7 @@
                             </view>
                             <view style="width: 100%; height: auto;margin-top: 20px;">
                                 <button disabled="{{enablereg}}" bindtap="btnreg"
-                                    style="margin: 0 auto ;width: 80%;color: white;text-align: center;line-height: 45px;border-radius: 5px;background: linear-gradient(#57ce8c,#009944);">
+                                    style="margin: 0 auto ;width: 80%;color: white;text-align: center;line-height: 50rpx;border-radius: 20px;background: linear-gradient(#57ce8c,#009944);">
                                     设置新密码</button>
                             </view>
                         </view>
