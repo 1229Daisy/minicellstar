@@ -7,13 +7,13 @@ Page({
     data: {
         msg: "发送验证码",
         disabled: false,
-        color: "linear-gradient(#57ce8c,#009944))",
+        color: "linear-gradient(#57ce8c,#009944)",
         phone: '',
         post: true,
         inputpwd: '',
         truePwd: false,
         enablereg: false,
-        regcolor: "linear-gradient(#57ce8c,#009944))",
+        regcolor: "linear-gradient(#57ce8c,#009944)",
         userName: '',
         vdcodein: ''
     },

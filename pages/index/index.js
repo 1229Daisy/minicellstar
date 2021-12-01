@@ -17,12 +17,48 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
+  onLoad(options) {
+    let clientname = options.clientname
+    let oThis = this
+    wx.getStorage({
+        key: 'sessionuser',
+        success: function (res) {
+            oThis.setData({
+                phone: res.data.phone,
+                clientname: clientname,
+            })
+            let data = {}
+            data.clientname = clientname
+            data.tel = res.data.phone
+            wx.request({
+                url: "https://bainuo.beijingepidial.com/client/index/message",
+                header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                method: "POST",
+                data: data,
+                // data: {"sampleid": 1121032800079},
+                complete: function (res) {
+                console.info(res.data.clientname+"#")
+                    oThis.setData({
+                      clientname: res.data.clientname,
+                      constractnum: res.data.constractnum,
+                      signingtime: res.data.signingtime,
+                      saveyear: res.data.saveyear,
+                      cell: res.data.cell,
+                      savestatus: res.data.savestatus,
+                      location: res.data.location,
+                      leftyear: res.data.leftyear,
+                        
+                    })
+                },
+                fail: function (res) {
+                    wx.showModal({title: '提示',content:"用户登录状态失效，请重新登录"})
+                }
+            })
+
+        }
+    })
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗

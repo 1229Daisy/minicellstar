@@ -61,9 +61,11 @@ Page({
                 duration: 2000
             })
         }else{
+          
             let sessionuser={}
             sessionuser.phone=this.data.phone
             sessionuser.password=this.data.pwd
+            console.info(sessionuser.phone+"######")
         wx.request({
             url: "https://bainuo.beijingepidial.com/client/user/login",
             header: {"Content-Type": "application/x-www-form-urlencoded"},

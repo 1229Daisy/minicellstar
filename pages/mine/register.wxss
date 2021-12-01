@@ -1,1 +1,4 @@
 /* pages/mine/register.wxss */
+.phcolor{
+    color: #cecece;
+}

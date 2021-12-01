@@ -9,7 +9,7 @@
                 mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/m02.png"> </image>
 </view>
 <view style="width: 80%;height: auto;margin: 0 auto;">
-   <view style="width: 40%;height: 100rpx;margin: 0 auto;text-align: center;line-height: 100rpx;">{{clientname}}</view>
+   <view style="width: 40%;height: 100rpx;margin: 0 auto;text-align: center;line-height: 100rpx;">{{login?clientname:""}}</view>
 </view>
 <view style="width: 80%;height:auto;margin: 0 auto;flex: auto;margin-top: 160rpx;" >
     <view style="width: 100%;height: 90rpx;margin: 0 auto;border: 1px solid #c2c2c2;border-radius: 5rpx;text-align: center;line-height: 90rpx;color: #c2c2c2;" bindtap="registerpage" wx:if="{{!login}}">注册</view>
