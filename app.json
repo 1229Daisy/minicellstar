@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/mine/mine",
+    "pages/mine/register",
+    "pages/mine/login",
     "pages/index/index",
     "pages/reserve/reserve",
     "pages/mine/fgpwd",
-    "pages/mine/mine",
-    "pages/mine/register",
     "pages/search/search",
     "pages/booking/booking",
     "pages/logs/logs"
