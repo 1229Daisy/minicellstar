@@ -13,46 +13,62 @@ Page({
     wx.getStorage({
       key:"sessionuser",
       success:function(session){
+        let user=session.data
         console.info(session.data)
-        console.info("success")
-        oThis.setData({
-          login:true,
-          clientname:session.data.clientname
-        })
+        wx.request({
+          url: "https://bainuo.beijingepidial.com/client/username/show",
+          header: {"Content-Type": "application/x-www-form-urlencoded"},
+          method: "POST",
+          data: user,
+          // data: {"barcode": 1121032800079},
+          complete: function (res) {
+              console.info(res.data.clientname)
+              oThis.setData({
+                login:true,
+                clientname:res.data.clientname
+              })         
+   
+          }
+      })
+        // console.info("success")
+        // oThis.setData({
+        //   login:true,
+        //   clientname:session.data.clientname
+        // })
       },
       fail:function(){
         oThis.setData({
           login:false,
-          phone:''
         })
       }
     })
   },
-  //跳转登录页面
-  loginpage:function(e){
-    let oThis=this
-    if(this.data.login){
-      wx.removeStorage({
-        key: 'sessionuser',
-        success: function(res) {
-          oThis.setData({login:false,clientname:''})
-          wx.switchTab({
-            url: '../index/index',
-          })
-        },
-      })
-
-    }else{
-      wx.navigateTo({
-        url: '../mine/login',
-      })
-    }
-  },
+  
   //跳转注册页面
   registerpage:function(e){
       wx.navigateTo({
         url: "../mine/register"
       })
+    },
+    loginpage:function(){
+      let oThis=this
+      if(this.data.login){
+        wx.removeStorage({
+          key: 'sessionuser',
+          success: function(res) {
+            oThis.setData({login:false})
+            wx.switchTab({
+              url: '../index/index',
+            })
+          },
+        })
+  
+      }else{
+        wx.navigateTo({
+          url: '../mine/login',
+        })
+      }
+     
     },
   /**
    * 生命周期函数--监听页面加载

@@ -92,30 +92,43 @@ submitReserve: function (e) {
   else{
   let oThis = this
   let formdata = {}
-  formdata.username = this.data.username
+  formdata.clientname = this.data.username
   formdata.reservedate = this.data.reservedate
-  formdata.projectindex = this.data.projectindex
+  formdata.item = this.data.project[projectindex].name
   formdata.usedate = this.data.usedate
   console.info(formdata)
   wx.getStorage({
       key: 'sessionuser',
       success: function (sessionuser) {
+       formdata.phone=sessionuser.data.phone
           wx.request({
               url: "https://bainuo.beijingepidial.com/client/cellstar/reserveform",
               header: {"Content-Type": "application/x-www-form-urlencoded"},
               method: "POST",
               data: formdata,
               complete: function (res) {
-                  wx.navigateTo({
-                      url: url
-                  })
+                wx.showToast({
+                  title: '已提交',
+                  icon: 'success',
+                  duration: 2000
+              })
+              oThis.setData({
+                username:'',
+                reservedate:'',
+                projectindex:'',
+                usedate:''
+              })
+
+                  // wx.navigateTo({
+                  //     url: '../mine/mine'
+                  // })
               }
           })
       },
       fail: function (res) {
           //wx.showModal({title: '提示',content:"用户登录状态失效，请重新登录"})
           wx.navigateTo({
-            url: '../user/login',
+            url: '../mine/login',
           })
       }
   })

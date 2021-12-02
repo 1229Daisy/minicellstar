@@ -4,6 +4,15 @@ const app = getApp()
 
 Page({
   data: {
+    login:false,
+    clientname: '',
+    constractnum: '',
+    signingtime: '',
+    saveyear: '',
+    cell: '',
+    savestatus: '',
+    location: '',
+    leftyear: '',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -17,45 +26,53 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad(options) {
-    let clientname = options.clientname
+  onShow: function () {
     let oThis = this
     wx.getStorage({
         key: 'sessionuser',
-        success: function (res) {
-            oThis.setData({
-                phone: res.data.phone,
-                clientname: clientname,
-            })
-            let data = {}
-            data.clientname = clientname
-            data.tel = res.data.phone
-            wx.request({
-                url: "https://bainuo.beijingepidial.com/client/index/message",
-                header: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                method: "POST",
-                data: data,
-                // data: {"sampleid": 1121032800079},
-                complete: function (res) {
-                console.info(res.data.clientname+"#")
-                    oThis.setData({
-                      clientname: res.data.clientname,
-                      constractnum: res.data.constractnum,
-                      signingtime: res.data.signingtime,
-                      saveyear: res.data.saveyear,
-                      cell: res.data.cell,
-                      savestatus: res.data.savestatus,
-                      location: res.data.location,
-                      leftyear: res.data.leftyear,
-                        
-                    })
-                },
-                fail: function (res) {
-                    wx.showModal({title: '提示',content:"用户登录状态失效，请重新登录"})
-                }
-            })
+        success: function (session) {
+          let center=session.data
+            console.info(session.data)
+              wx.request({
+                  url: "https://bainuo.beijingepidial.com/client/index/message",
+                  header: {
+                      "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  method: "POST",
+                  data: center,
+                  // data: {"sampleid": 1121032800079},
+                  complete: function (res) {
+                  console.info(res.data.clientname+"#")
+                      oThis.setData({
+                        login:true,
+                        clientname: res.data.clientname,
+                        constractnum: res.data.constractnum,
+                        signingtime: res.data.signingtime,
+                        saveyear: res.data.saveyear,
+                        cell: res.data.cell,
+                        savestatus: res.data.savestatus,
+                        location: res.data.location,
+                        leftyear: res.data.leftyear,
+                          
+                      })
+                  },
+                  fail: function (res) {
+                    console.info(res+"%%%%%%%%%") 
+                      oThis.setData({
+                        login:false,
+                        clientname: '',
+                        constractnum: '',
+                        signingtime: '',
+                        saveyear: '',
+                        cell: '',
+                        savestatus: '',
+                        location: '',
+                        leftyear: '',
+                      })
+                      wx.showModal({title: '提示',content:"用户登录状态失效，请重新登录"})
+                  }
+              })
+          
 
         }
     })
