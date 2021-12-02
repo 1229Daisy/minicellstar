@@ -94,7 +94,7 @@ submitReserve: function (e) {
   let formdata = {}
   formdata.clientname = this.data.username
   formdata.reservedate = this.data.reservedate
-  formdata.item = this.data.project[projectindex].name
+  formdata.item = this.data.projectindex
   formdata.usedate = this.data.usedate
   console.info(formdata)
   wx.getStorage({
