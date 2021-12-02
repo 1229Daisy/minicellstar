@@ -79,6 +79,7 @@ Page({
     })
   },
   onTabItemTap(item) {
+    let oThis = this
     oThis.setData({
       clientname: '',
       constractnum: '',

@@ -9,12 +9,12 @@
                 mode="widthFix" src="https://app.cell-stars.com/public/images/m02.png"> </image>
 </view>
 <view style="width: 80%;height: auto;margin: 0 auto;">
-   <view style="width: 40%;height: 100rpx;margin: 0 auto;text-align: center;line-height: 100rpx;">{{login?clientname:""}}</view>
+   <view style="width: 40%;height: 100rpx;margin: 0 auto;text-align: center;line-height: 100rpx;color: #818181">{{login?clientname:""}}</view>
 </view>
 <view style="width: 80%;height:auto;margin: 0 auto;flex: auto;margin-top: 160rpx;" >
-    <view style="width: 100%;height: 90rpx;margin: 0 auto;border: 1px solid #c2c2c2;border-radius: 5rpx;text-align: center;line-height: 90rpx;color: #c2c2c2;" bindtap="registerpage" wx:if="{{!login}}">注册</view>
+    <view style="width: 100%;height: 90rpx;margin: 0 auto;border: 1px solid #818181;border-radius: 5rpx;text-align: center;line-height: 90rpx;color: #818181;border-radius: 40rpx;" bindtap="registerpage" wx:if="{{!login}}">注册</view>
 </view>
 <view style="width: 80%;height: auto;margin: 0 auto;flex: auto;margin-top: 20rpx;" bindtap="loginpage">
-    <view style="width: 100%;height: 90rpx;margin: 0 auto;border: 1px solid green;border-radius: 5rpx;background-color: #009944;text-align: center;line-height: 90rpx;color: white;">{{login?"退出登录":"登录"}}</view>
+    <view style="width: 100%;height: 90rpx;margin: 0 auto;border: 1px solid white;border-radius: 5rpx;background: linear-gradient(#57ce8c,#009944);text-align: center;border-radius: 40rpx;line-height: 90rpx;color: white;">{{login?"退出登录":"登录"}}</view>
 </view>
 </view>

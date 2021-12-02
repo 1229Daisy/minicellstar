@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/mine/fgpwd",
+    "pages/mine/register",
     "pages/search/search",
     "pages/reserve/reserve",
-    "pages/mine/register",
     "pages/mine/mine",
     "pages/mine/login",
-    "pages/mine/fgpwd",
     "pages/logs/logs"
   ],
   "window": {

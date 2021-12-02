@@ -34,7 +34,7 @@ Page({
                                 mask: true
                               })
                            wx.downloadFile({
-                          url: "https://app.cell-stars.com/public/upload/" +res.data.immunity,
+                          url: "https://app.cell-stars.com/" +res.data.immunity,
                           header: {},
                           success: function (res) {
                             wx.showLoading({
@@ -116,19 +116,21 @@ Page({
                   data: tofindpdf,
                   // data: {"sampleid": 1121032800079},
                   complete: function (res) {
+                    console.info("https://app.cell-stars.com/" +res.data.physical)
                     // wx.showLoading({
                     //   title: '加载中',
                     //   duration:10000,
                     //   mask: true
                     // })
                     if (res.data.physical) {
+                     
                         wx.showLoading({
                             title: '加载中',
                             duration:10000,
                             mask: true
                           })
                        wx.downloadFile({
-                      url: "https://app.cell-stars.com/public/upload/" +res.data.physical,
+                      url: "https://app.cell-stars.com/" +res.data.physical,
                       header: {},
                       success: function (res) {
                         wx.showLoading({
@@ -143,7 +145,7 @@ Page({
                             fileType: 'pdf',
                             success: function (res) {
                               wx.hideLoading()
-                              console.log(res);
+                             
                               wx.showToast({
                                 title: "打开成功",
                                 icon: 'success',
@@ -222,7 +224,7 @@ showpdf3: function (e) {
                           mask: true
                         })
                      wx.downloadFile({
-                    url: "https://app.cell-stars.com/public/upload/" +res.data.cellsave,
+                    url: "https://app.cell-stars.com/" +res.data.cellsave,
                     header: {},
                     success: function (res) {
                       wx.showLoading({
@@ -316,7 +318,7 @@ showpdf4: function (e) {
                           mask: true
                         })
                      wx.downloadFile({
-                    url: "https://app.cell-stars.com/public/upload/" +res.data.celltest,
+                    url: "https://app.cell-stars.com/" +res.data.celltest,
                     header: {},
                     success: function (res) {
                       wx.showLoading({
@@ -410,7 +412,7 @@ showpdf5: function (e) {
                           mask: true
                         })
                      wx.downloadFile({
-                    url: "https://app.cell-stars.com/public/upload/" +res.data.inventory,
+                    url: "https://app.cell-stars.com/" +res.data.inventory,
                     header: {},
                     success: function (res) {
                       wx.showLoading({

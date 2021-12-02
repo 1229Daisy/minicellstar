@@ -20,7 +20,7 @@
                 style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#009944 ;font-size: 40rpx;margin-top: 30rpx;">
                 体检报告</view>
               <view style="width: 100%;height: auto;margin: 0 auto ;line-height: auto;color:#cecece ;font-size: 27rpx;">
-                查询省体检报告报告</view>
+                查询个人体检报告</view>
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
