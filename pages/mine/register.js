@@ -59,7 +59,7 @@ Page({
         } else {
             let oThis = this;
             wx.request({
-                url: "https://bainuo.beijingepidial.com/client/user/finduser",
+                url: "https://app.cell-stars.com/client/user/finduser",
                 header: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
@@ -98,7 +98,7 @@ Page({
                                 post = false
                                 //通过barcode查询宫颈癌报告,1先获取输入的值，返回给后台数据库去查询是否存在这个barcode,如果有数据有返回，没有数据就提示错误信息或输入正确的barcode.
                                 wx.request({
-                                    url: "https://bainuo.beijingepidial.com/client/user/sms",
+                                    url: "https://app.cell-stars.com/client/user/sms",
                                     header: {
                                         "Content-Type": "application/x-www-form-urlencoded"
                                     },
@@ -206,7 +206,7 @@ Page({
                 regcolor: "grey"
             })
             wx.request({
-                url: "https://bainuo.beijingepidial.com/client/cellstar/adduser",
+                url: "https://app.cell-stars.com/client/cellstar/adduser",
                 header: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },

@@ -10,10 +10,10 @@
         <view style="width: 100%;height: auto;margin: 0 auto;flex: auto;">
           <!-- 体检报告 -->
           <view
-            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 100rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 100rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;" bindtap="showpdf1">
             <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s01.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s01.png"> </image>
             </view>
             <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
               <view
@@ -24,15 +24,15 @@
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s02.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s02.png"> </image>
             </view>
           </view>
           <!-- 免疫力评估 -->
           <view
-            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;"bindtap="showpdf2">
             <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s05.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s05.png"> </image>
             </view>
             <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
               <view
@@ -43,15 +43,15 @@
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s02.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s02.png"> </image>
             </view>
           </view>
           <!-- 细胞质检 -->
           <view
-            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;"bindtap="showpdf3">
             <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s03.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s03.png"> </image>
             </view>
             <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
               <view
@@ -62,15 +62,15 @@
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s02.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s02.png"> </image>
             </view>
           </view>
           <!-- 细胞储存 -->
           <view
-            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;"bindtap="showpdf4">
             <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s04.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s04.png"> </image>
             </view>
             <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
               <view
@@ -81,15 +81,15 @@
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s02.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s02.png"> </image>
             </view>
           </view>
           <!-- 省库查询 -->
           <view
-            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;">
+            style="width: 90%;height: 150rpx;margin: 0 auto ;display: flex;margin-top: 50rpx;border: 1px solid white;background-color:white ;border-radius: 20rpx;box-shadow: 0px 5px 10px 3px #D1D1D1;"bindtap="showpdf5">
             <view style="width: 25%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 65%;height: auto;margin: 0 auto ;margin-left: 20rpx;margin-top: 20rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s06.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s06.png"> </image>
             </view>
             <view style="width: 55%;height: 150rpx;margin: 0 auto;flex: auto;">
               <view
@@ -100,7 +100,7 @@
             </view>
             <view style="width: 20%;height: 150rpx;margin: 0 auto ;">
               <image style="width: 50%;height: auto;margin: 0 auto ;margin-left: 40rpx;margin-top: 45rpx;"
-                mode="widthFix" src="https://bainuo.beijingepidial.com/public/images/s02.png"> </image>
+                mode="widthFix" src="https://app.cell-stars.com/public/images/s02.png"> </image>
             </view>
           </view>
 

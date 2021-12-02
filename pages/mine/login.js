@@ -67,7 +67,7 @@ Page({
             sessionuser.password=this.data.pwd
             console.info(sessionuser.phone+sessionuser.password+"######")
         wx.request({
-            url: "https://bainuo.beijingepidial.com/client/user/login",
+            url: "https://app.cell-stars.com/client/user/login",
             header: {"Content-Type": "application/x-www-form-urlencoded"},
             method: "POST",
             data: sessionuser,

@@ -102,7 +102,7 @@ submitReserve: function (e) {
       success: function (sessionuser) {
        formdata.phone=sessionuser.data.phone
           wx.request({
-              url: "https://bainuo.beijingepidial.com/client/cellstar/reserveform",
+              url: "https://app.cell-stars.com/client/cellstar/reserveform",
               header: {"Content-Type": "application/x-www-form-urlencoded"},
               method: "POST",
               data: formdata,

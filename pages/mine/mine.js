@@ -9,6 +9,7 @@ Page({
     clientname:'',
   },
   onShow:function(){
+   
     let oThis=this
     wx.getStorage({
       key:"sessionuser",
@@ -16,7 +17,7 @@ Page({
         let user=session.data
         console.info(session.data)
         wx.request({
-          url: "https://bainuo.beijingepidial.com/client/username/show",
+          url: "https://app.cell-stars.com/client/username/show",
           header: {"Content-Type": "application/x-www-form-urlencoded"},
           method: "POST",
           data: user,
@@ -58,7 +59,7 @@ Page({
           success: function(res) {
             oThis.setData({login:false})
             wx.switchTab({
-              url: '../index/index',
+              url: '../mine/mine',
             })
           },
         })

@@ -7,7 +7,476 @@ Page({
     data: {
 
     },
+    showpdf2: function (e) {
+        let oThis = this
+        wx.getStorage({
+              key: 'sessionuser',
+              success: function (res) {
+                let tofindpdf=res.data
+                console.info(tofindpdf)
+               
+                wx.request({
+                      url: "https://app.cell-stars.com/client/check/report",
+                      header: { "Content-Type": "application/x-www-form-urlencoded"},
+                      method: "POST",
+                      data: tofindpdf,
+                      // data: {"sampleid": 1121032800079},
+                      complete: function (res) {
+                        // wx.showLoading({
+                        //   title: '加载中',
+                        //   duration:10000,
+                        //   mask: true
+                        // })
+                        if (res.data.immunity) {
+                            wx.showLoading({
+                                title: '加载中',
+                                duration:10000,
+                                mask: true
+                              })
+                           wx.downloadFile({
+                          url: "https://app.cell-stars.com/public/upload/" +res.data.immunity,
+                          header: {},
+                          success: function (res) {
+                            wx.showLoading({
+                              title: '加载中',
+                              duration:10000,
+                              mask: true
+                            })
+                            var filePath = res.tempFilePath;
+                            console.log(res);
+                              wx.openDocument({
+                                filePath: filePath,
+                                fileType: 'pdf',
+                                success: function (res) {
+                                  wx.hideLoading()
+                                  console.log(res);
+                                  wx.showToast({
+                                    title: "打开成功",
+                                    icon: 'success',
+                                    duration: 2000
+                                  })
+                                },
+                                fail: function (res) {
+                                  wx.hideLoading()
+                                  wx.showToast({
+                                    title: "打开失败",
+                                    icon: 'success',
+                                    duration: 2000
+                                  })
+                                },
+                                complete: function (res) {
 
+                                  console.log(res);
+                                }
+                              })
+                           
+                          },
+                          fail: function (res) {
+                            console.info(res)
+                            console.log('文件下载失败');
+                          },
+                          complete: function (res) {},
+
+                        })
+                     
+                    }
+                    else {
+                      wx.hideLoading()
+                      wx.showModal({
+                        title: '提示',
+                        content: "报告未生成，请等候"
+                      })
+                    }
+
+
+                  },
+                  fail: function (res) {}
+              })
+          },
+          fail: function (e) {
+            wx.navigateTo({
+              url: '../mine/login'
+            })
+          }
+      })
+
+  },
+  showpdf1: function (e) {
+    let oThis = this
+    wx.getStorage({
+          key: 'sessionuser',
+          success: function (res) {
+            let tofindpdf=res.data
+            console.info(tofindpdf)
+           
+            wx.request({
+                  url: "https://app.cell-stars.com/client/check/report",
+                  header: { "Content-Type": "application/x-www-form-urlencoded"},
+                  method: "POST",
+                  data: tofindpdf,
+                  // data: {"sampleid": 1121032800079},
+                  complete: function (res) {
+                    // wx.showLoading({
+                    //   title: '加载中',
+                    //   duration:10000,
+                    //   mask: true
+                    // })
+                    if (res.data.physical) {
+                        wx.showLoading({
+                            title: '加载中',
+                            duration:10000,
+                            mask: true
+                          })
+                       wx.downloadFile({
+                      url: "https://app.cell-stars.com/public/upload/" +res.data.physical,
+                      header: {},
+                      success: function (res) {
+                        wx.showLoading({
+                          title: '加载中',
+                          duration:10000,
+                          mask: true
+                        })
+                        var filePath = res.tempFilePath;
+                        console.log(res);
+                          wx.openDocument({
+                            filePath: filePath,
+                            fileType: 'pdf',
+                            success: function (res) {
+                              wx.hideLoading()
+                              console.log(res);
+                              wx.showToast({
+                                title: "打开成功",
+                                icon: 'success',
+                                duration: 2000
+                              })
+                            },
+                            fail: function (res) {
+                              wx.hideLoading()
+                              wx.showToast({
+                                title: "打开失败",
+                                icon: 'success',
+                                duration: 2000
+                              })
+                            },
+                            complete: function (res) {
+
+                              console.log(res);
+                            }
+                          })
+                       
+                      },
+                      fail: function (res) {
+                        console.info(res)
+                        console.log('文件下载失败');
+                      },
+                      complete: function (res) {},
+
+                    })
+                 
+                }
+                else {
+                  wx.hideLoading()
+                  wx.showModal({
+                    title: '提示',
+                    content: "报告未生成，请等候"
+                  })
+                }
+
+
+              },
+              fail: function (res) {}
+          })
+      },
+      fail: function (e) {
+        wx.navigateTo({
+          url: '../mine/login'
+        })
+      }
+  })
+
+},
+showpdf3: function (e) {
+  let oThis = this
+  wx.getStorage({
+        key: 'sessionuser',
+        success: function (res) {
+          let tofindpdf=res.data
+          console.info(tofindpdf)
+         
+          wx.request({
+                url: "https://app.cell-stars.com/client/check/report",
+                header: { "Content-Type": "application/x-www-form-urlencoded"},
+                method: "POST",
+                data: tofindpdf,
+                // data: {"sampleid": 1121032800079},
+                complete: function (res) {
+                  // wx.showLoading({
+                  //   title: '加载中',
+                  //   duration:10000,
+                  //   mask: true
+                  // })
+                  if (res.data.cellsave) {
+                      wx.showLoading({
+                          title: '加载中',
+                          duration:10000,
+                          mask: true
+                        })
+                     wx.downloadFile({
+                    url: "https://app.cell-stars.com/public/upload/" +res.data.cellsave,
+                    header: {},
+                    success: function (res) {
+                      wx.showLoading({
+                        title: '加载中',
+                        duration:10000,
+                        mask: true
+                      })
+                      var filePath = res.tempFilePath;
+                      console.log(res);
+                        wx.openDocument({
+                          filePath: filePath,
+                          fileType: 'pdf',
+                          success: function (res) {
+                            wx.hideLoading()
+                            console.log(res);
+                            wx.showToast({
+                              title: "打开成功",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          fail: function (res) {
+                            wx.hideLoading()
+                            wx.showToast({
+                              title: "打开失败",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          complete: function (res) {
+
+                            console.log(res);
+                          }
+                        })
+                     
+                    },
+                    fail: function (res) {
+                      console.info(res)
+                      console.log('文件下载失败');
+                    },
+                    complete: function (res) {},
+
+                  })
+               
+              }
+              else {
+                wx.hideLoading()
+                wx.showModal({
+                  title: '提示',
+                  content: "报告未生成，请等候"
+                })
+              }
+
+
+            },
+            fail: function (res) {}
+        })
+    },
+    fail: function (e) {
+      wx.navigateTo({
+        url: '../mine/login'
+      })
+    }
+})
+
+},
+showpdf4: function (e) {
+  let oThis = this
+  wx.getStorage({
+        key: 'sessionuser',
+        success: function (res) {
+          let tofindpdf=res.data
+          console.info(tofindpdf)
+         
+          wx.request({
+                url: "https://app.cell-stars.com/client/check/report",
+                header: { "Content-Type": "application/x-www-form-urlencoded"},
+                method: "POST",
+                data: tofindpdf,
+                // data: {"sampleid": 1121032800079},
+                complete: function (res) {
+                  // wx.showLoading({
+                  //   title: '加载中',
+                  //   duration:10000,
+                  //   mask: true
+                  // })
+                  if (res.data.celltest) {
+                      wx.showLoading({
+                          title: '加载中',
+                          duration:10000,
+                          mask: true
+                        })
+                     wx.downloadFile({
+                    url: "https://app.cell-stars.com/public/upload/" +res.data.celltest,
+                    header: {},
+                    success: function (res) {
+                      wx.showLoading({
+                        title: '加载中',
+                        duration:10000,
+                        mask: true
+                      })
+                      var filePath = res.tempFilePath;
+                      console.log(res);
+                        wx.openDocument({
+                          filePath: filePath,
+                          fileType: 'pdf',
+                          success: function (res) {
+                            wx.hideLoading()
+                            console.log(res);
+                            wx.showToast({
+                              title: "打开成功",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          fail: function (res) {
+                            wx.hideLoading()
+                            wx.showToast({
+                              title: "打开失败",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          complete: function (res) {
+
+                            console.log(res);
+                          }
+                        })
+                     
+                    },
+                    fail: function (res) {
+                      console.info(res)
+                      console.log('文件下载失败');
+                    },
+                    complete: function (res) {},
+
+                  })
+               
+              }
+              else {
+                wx.hideLoading()
+                wx.showModal({
+                  title: '提示',
+                  content: "报告未生成，请等候"
+                })
+              }
+
+
+            },
+            fail: function (res) {}
+        })
+    },
+    fail: function (e) {
+      wx.navigateTo({
+        url: '../mine/login'
+      })
+    }
+})
+
+},
+showpdf5: function (e) {
+  let oThis = this
+  wx.getStorage({
+        key: 'sessionuser',
+        success: function (res) {
+          let tofindpdf=res.data
+          console.info(tofindpdf)
+         
+          wx.request({
+                url: "https://app.cell-stars.com/client/check/report",
+                header: { "Content-Type": "application/x-www-form-urlencoded"},
+                method: "POST",
+                data: tofindpdf,
+                // data: {"sampleid": 1121032800079},
+                complete: function (res) {
+                  // wx.showLoading({
+                  //   title: '加载中',
+                  //   duration:10000,
+                  //   mask: true
+                  // })
+                  if (res.data.inventory) {
+                      wx.showLoading({
+                          title: '加载中',
+                          duration:10000,
+                          mask: true
+                        })
+                     wx.downloadFile({
+                    url: "https://app.cell-stars.com/public/upload/" +res.data.inventory,
+                    header: {},
+                    success: function (res) {
+                      wx.showLoading({
+                        title: '加载中',
+                        duration:10000,
+                        mask: true
+                      })
+                      var filePath = res.tempFilePath;
+                      console.log(res);
+                        wx.openDocument({
+                          filePath: filePath,
+                          fileType: 'pdf',
+                          success: function (res) {
+                            wx.hideLoading()
+                            console.log(res);
+                            wx.showToast({
+                              title: "打开成功",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          fail: function (res) {
+                            wx.hideLoading()
+                            wx.showToast({
+                              title: "打开失败",
+                              icon: 'success',
+                              duration: 2000
+                            })
+                          },
+                          complete: function (res) {
+
+                            console.log(res);
+                          }
+                        })
+                     
+                    },
+                    fail: function (res) {
+                      console.info(res)
+                      console.log('文件下载失败');
+                    },
+                    complete: function (res) {},
+
+                  })
+               
+              }
+              else {
+                wx.hideLoading()
+                wx.showModal({
+                  title: '提示',
+                  content: "报告未生成，请等候"
+                })
+              }
+
+
+            },
+            fail: function (res) {}
+        })
+    },
+    fail: function (e) {
+      wx.navigateTo({
+        url: '../mine/login'
+      })
+    }
+})
+
+},
     /**
      * 生命周期函数--监听页面加载
      */
