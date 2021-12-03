@@ -15,7 +15,8 @@ Page({
         enablereg: false,
         regcolor: "linear-gradient(#57ce8c,#009944)",
         userName: '',
-        vdcodein: ''
+        vdcodein: '',
+       
     },
 
     /**

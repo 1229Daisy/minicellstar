@@ -57,6 +57,7 @@ Page({
         wx.removeStorage({
           key: 'sessionuser',
           success: function(res) {
+            // console.info(res.data.clientname+"***")
             oThis.setData({login:false})
             wx.switchTab({
               url: '../mine/mine',
