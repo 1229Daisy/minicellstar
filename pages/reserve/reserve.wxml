@@ -48,7 +48,7 @@
           <!-- 历史预约按钮 -->
           <view style="width:100%;margin-top: 15px;margin-bottom: 50rpx;">
             <view style="display: flex; width: 80%;margin: 0 auto;justify-content:center;">
-              <view style="font-size: 25rpx;color:#009944; text-decoration: underline;" bindtap="next">历史预约记录</view>
+              <view style="font-size: 25rpx;color:#009944; text-decoration: underline;" >历史预约记录</view>
             </view>
           </view>
         </view>

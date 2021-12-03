@@ -32,20 +32,22 @@ Page({
         key: 'sessionuser',
         success: function (session) {
           let center=session.data
-            console.info(center+"$$$$$")
-            if(!center){
-              oThis.setData({
-                clientname: '',
-                constractnum: '',
-                signingtime: '',
-                saveyear: '',
-                cell: '',
-                savestatus: '',
-                location: '',
-                leftyear: '',
-                  
-              })
-            }else{
+          console.info(center+"$$$$$")
+          if(!center){
+            console.info("cccc")
+            oThis.setData({
+              clientname: '',
+              constractnum: '',
+              signingtime: '',
+              saveyear: '',
+              cell: '',
+              savestatus: '',
+              location: '',
+              leftyear: '',
+                
+            })
+          }else{ 
+            console.info("咋回事")
               wx.request({
                   url: "https://app.cell-stars.com/client/index/message",
                   header: {
@@ -55,19 +57,31 @@ Page({
                   data: center,
                   // data: {"sampleid": 1121032800079},
                   complete: function (res) {
-                  console.info(res.data.clientname+"#")
-                      oThis.setData({
-                        login:true,
-                        clientname: res.data.clientname,
-                        constractnum: res.data.constractnum,
-                        signingtime: res.data.signingtime,
-                        saveyear: res.data.saveyear,
-                        cell: res.data.cell,
-                        savestatus: res.data.savestatus,
-                        location: res.data.location,
-                        leftyear: res.data.leftyear,
-                          
-                      })
+                  let year=res.data.saveyear
+                  let savedate=year.replace(/年/,'')
+                  console.info(savedate+"#")
+                  setInterval(function () {
+                    let startday=new Date(res.data.signingtime);  
+                    let end=new Date(startday);// 
+                     end.setFullYear(end.getFullYear()+parseInt(savedate)); //将年限转换为日期
+                     end.setDate(end.getDate()-parseInt(savedate)); 
+                    let endday=end
+                    let nowday = new Date();
+                    let time =endday.getTime() - nowday.getTime();
+                    let day = parseInt(time/(1000 * 3600 * 24))
+                    let leftyear=day+'天'
+                   oThis.setData({
+                    clientname: res.data.clientname,
+                    constractnum: res.data.constractnum,
+                    signingtime: res.data.signingtime,
+                    saveyear: res.data.saveyear,
+                    cell: res.data.cell,
+                    savestatus: res.data.savestatus,
+                    location: res.data.location,
+                    leftyear: leftyear,    
+                  })
+                          }, 1000);
+                   
                   },
                   fail: function (res) {
                       wx.showModal({title: '提示',content:"用户登录状态失效，请重新登录"})
@@ -78,9 +92,10 @@ Page({
         }
     })
   },
-  onTabItemTap(item) {
-    let oThis = this
-    oThis.setData({
+  onTabItemTap(item) { 
+    console.info("sss")
+    let That = this
+    That.setData({
       clientname: '',
       constractnum: '',
       signingtime: '',
@@ -93,7 +108,7 @@ Page({
     })
   },
   onLoad: function (options) {
-   
+   console.info('onload')
    },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
